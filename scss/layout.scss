@@ -1,0 +1,183 @@
+///layout 공통
+#wrap{
+  width: 1320px;
+  margin: 0 auto;
+  #header{
+    position: absolute;
+    height: 70px;
+    width: 1320px;
+    background-color: rgba(0,0,0,.8);
+    z-index: 3;
+    //top menu 구현
+    #top_nav{
+      position: relative;
+      display: flex;
+      justify-content: space-around;
+      height: 150px;
+      width: 800px;
+      left: calc(-50% + 400px);
+      float: right;
+      ul{
+        float: left;
+        position: relative;
+            display: inline;
+            top: -12px;
+        li{
+          display: inline-block;
+          margin-left: 30px;
+          &:first-child{
+            margin-left: 0;
+          }
+          img{
+            position: relative;
+            display: inline;
+            top: 20px;
+          }
+          a{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            line-height: 60px;
+            height: 60px;
+          }
+          &:hover{
+            a{
+              color: white;
+            }
+            .sub_menu{
+              visibility: visible;
+              top: 30%;
+              opacity: 1;
+
+            }
+          }
+        }
+      }
+    }
+  }
+  #footer{
+    margin-top: 50px;
+    .flexbox{
+      display: flex;
+      position: absolute;
+      flex-direction: column;
+      left: 0;
+      .flex.top{
+        display: flex;
+        justify-content: space-around;
+        padding: 80px 0;
+        background: #333;
+        color: white;
+        ul{
+          li{
+            font-weight: 100;
+            &:nth-of-type(1){
+              font-weight: 700;
+            }
+            &:nth-of-type(2){
+              margin-top: 50px;
+            }
+          }
+        }
+      }
+      .flex.bottom{
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 100vw;
+        left: 0;
+        height: 80px;
+        background-color: gray;
+        ul{
+          display: flex;
+          padding-left: 20px;
+          li{
+            position: relative;
+            margin-right: 30px;
+            a{
+              color: white;
+              position: relative;
+              font-size: 14px;
+            }
+          }
+          &:nth-of-type(2){
+            margin-left: 295px;
+            li{
+              width: 25px;
+              height: 25px;
+              &:nth-of-type(1){
+                background: url('../img/icon/sns_01.png') no-repeat;
+                background-size: contain;
+              }
+              &:nth-of-type(2){
+                background: url('../img/icon/sns_02.png') no-repeat;
+                background-size: contain;
+              }
+              &:nth-of-type(3){
+                background: url('../img/icon/sns_03.png') no-repeat;
+                background-size: contain;
+              }
+              &:nth-of-type(4){
+                background: url('../img/icon/sns_04.png') no-repeat;
+                background-size: contain;
+              }
+              &:nth-of-type(5){
+                background: url('../img/icon/sns_05.png') no-repeat;
+                background-size: contain;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .fixedbox{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    bottom: 50px;
+    right: 30px;
+    color: rgba(5, 5, 5, 0.8);
+    text-align: right;
+    z-index: 100;
+    div{
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      width: 300px;
+      height: 20px;
+      &:hover ~ h3{
+        display: inline-block;
+        margin-right: 30px;
+        padding: 0 20px;
+        color: white;
+        background-color: rgba(0,0,0,.2);
+      }
+    }
+    h3{
+      display: none;
+    }
+    .curcle{
+      position: absolute;
+      width: 200px;
+      margin-top: 5px;
+      .redius{
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: rgb(41, 41, 41);
+        border-radius: 100%;
+        box-sizing: border-box;
+      }
+    }
+    .curcle:hover > .redius{
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin: -5px;
+      background: url('../img/icon/circle.png');
+      background-size: contain;
+      transition: .5s;
+    }
+  }
+}

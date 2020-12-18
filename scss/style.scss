@@ -1,0 +1,9 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+//scss 파일 분화
+@import "initial.scss";//css 초기화
+@import "layout.scss";//공통 레이아웃
+
+//페이지 분화
+@import "main.scss";//메인페이지
